@@ -1,0 +1,48 @@
+.AddCommentContainerClass {
+    padding: 20px;
+    background-color: #22c55e1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 30%;
+    min-width: 250px;
+    border-radius: 15px;
+    min-height: 215px;
+    height: fit-content;
+    text-align: center;
+    min-width: 200px;
+
+
+}
+
+.addReviewContainerClass {
+    background-color: #157e3bfc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 150px;
+    width: 50%;
+}
+
+/* Comment Form Style */
+.CommentFormContainerClass {}
+
+@media (max-width:1270px) {
+    .AddCommentContainerClass {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+}

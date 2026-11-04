@@ -1,0 +1,56 @@
+.LatestProductsContainerClass {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.arbItemsListContainerClass {
+    flex-direction: row-reverse;
+}
+
+.itemsListContainerClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.filterContainerClass {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* padding: 20px 0px; */
+
+}
+
+.filterContainerClass>div {
+    border: 1px solid var(--borderColor);
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.activeClass {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.3s;
+}
+
+.hoveredClass {
+    transform: all 0.3s;
+}
+
+.hoveredClass:hover {
+    background-color: gray;
+}
+
+.arbFilterContainerClass {
+    flex-direction: row-reverse;
+}
+
+.darkFilterContainerClass {
+    color: white;
+}

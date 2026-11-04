@@ -1,0 +1,20 @@
+:root {
+  --mainTextColor: #111827;
+  --secondTextColor: #647488;
+  --mainButtonColor: #22C55E;
+  --lightBackground: #f5f8fa;
+  --darkBackground: #323a46;
+  --cardLight: #FFFFFF;
+  --cardDark: #1E293B;
+  --borderColor: #E2EBF0;
+  --successColor: #10BBB1;
+  --failedColor: #EF4444;
+  --mainDarkBorder: rgb(88, 88, 88);
+  --mainBoxShadow: #bccce0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}

@@ -1,0 +1,24 @@
+.MessageContainerClass {
+    position: absolute;
+    height: 250px;
+    width: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+
+}
+
+.reminderClass {
+    background-color: var(--cardDark);
+    padding: 15px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,10 @@
+.OrderDataContainerClass {
+    width: 100%;
+    /* margin: 20px auto; */
+    padding: 20px;
+    color: black;
+}
+
+.darkOrderDataContainerClass {
+    color: white;
+}
