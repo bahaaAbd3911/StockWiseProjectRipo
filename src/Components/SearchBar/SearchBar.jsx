@@ -24,7 +24,8 @@ import { motion } from "motion/react";
 import userImg from "../../Images/istockphoto-1170073824-612x612.jpg";
 
 function SearchBar({ value }) {
-  const { dark, lang, setSearchFilters } = useContext(AuthContext);
+  const { dark, lang, setSearchFilters, userList, setUserList } =
+    useContext(AuthContext);
   let navigate = useNavigate();
   return (
     <>
@@ -77,7 +78,14 @@ function SearchBar({ value }) {
             <div
               className={heartLoveClass}
               onClick={() => {
-                navigate("/client/favoriteList");
+                navigate("/client/profile");
+                setUserList((prev) => {
+                  let updated = prev.map((item) => ({
+                    ...item,
+                    isActive: item.index === 3 ? true : false,
+                  }));
+                  return updated;
+                });
               }}
             >
               <i className="fa-solid fa-heart"></i>
@@ -86,7 +94,14 @@ function SearchBar({ value }) {
             <div
               className={shoppingCartClass}
               onClick={() => {
-                navigate("/client/shoppingList");
+                navigate("/client/profile");
+                setUserList((prev) => {
+                  let updated = prev.map((item) => ({
+                    ...item,
+                    isActive: item.index === 2 ? true : false,
+                  }));
+                  return updated;
+                });
               }}
             >
               <i className="fa-solid fa-cart-shopping"></i>
@@ -96,6 +111,13 @@ function SearchBar({ value }) {
               className={profileBtnContainerClass}
               onClick={() => {
                 navigate("/client/profile");
+                setUserList((prev) => {
+                  let updated = prev.map((itemX) => ({
+                    ...itemX,
+                    isActive: itemX.index === 0 ? true : false,
+                  }));
+                  return updated;
+                });
               }}
             >
               <img src={userImg} />

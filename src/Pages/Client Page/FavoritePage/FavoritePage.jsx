@@ -23,8 +23,8 @@ function FavoritePage() {
   return (
     <>
       <div className={FavoritePageContainerClass}>
-        <UserSettings />
-        <SearchBar value={1} />
+        {/* <UserSettings /> */}
+        {/* <SearchBar value={1} /> */}
         <Header
           icon={"fa-solid fa-heart"}
           title={"My Favorites"}

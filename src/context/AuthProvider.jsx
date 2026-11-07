@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AuthContext } from "./AuthContext";
 import { productsList, productReviews } from "../objects.js";
+// Import Image
+import img1 from "../Images/AirFrier.jpg";
 
 export const AuthProvider = ({ children }) => {
   const [userData, setUserData] = useState();
@@ -27,6 +29,74 @@ export const AuthProvider = ({ children }) => {
   const [products, setProducts] = useState(productsList);
 
   const [comments, setComments] = useState(productReviews);
+
+  const userOrders = [
+    {
+      productImage: img1,
+      orderNumber: 10,
+      orderDate: "11/7/2026",
+      orderStatuse: "waitingList",
+    },
+
+    {
+      productImage: img1,
+      orderNumber: 10,
+      orderDate: "11/7/2026",
+      orderStatuse: "waitingList",
+    },
+
+    {
+      productImage: img1,
+      orderNumber: 10,
+      orderDate: "11/7/2026",
+      orderStatuse: "waitingList",
+    },
+
+    {
+      productImage: img1,
+      orderNumber: 10,
+      orderDate: "11/7/2026",
+      orderStatuse: "waitingList",
+    },
+  ];
+
+  const [userList, setUserList] = useState([
+    {
+      icon: <i className="fa-solid fa-user"></i>,
+      label: "My Profile",
+      arbLabel: "الصفحة الشخصية",
+      isActive: true,
+      index: 0,
+    },
+    {
+      icon: <i className="fa-solid fa-box"></i>,
+      label: "My Orders",
+      arbLabel: "طلباتي",
+      isActive: false,
+      index: 1,
+    },
+    {
+      icon: <i className="fa-solid fa-cart-shopping"></i>,
+      label: "My Cart",
+      arbLabel: "سلة التسوق",
+      isActive: false,
+      index: 2,
+    },
+    {
+      icon: <i className="fa-solid fa-heart"></i>,
+      label: "My Favorites",
+      arbLabel: "قائمتي المفضلة",
+      isActive: false,
+      index: 3,
+    },
+    {
+      icon: <i className="fa-solid fa-right-from-bracket"></i>,
+      label: "Log Out",
+      arbLabel: "تسجيل الخروج",
+      isActive: false,
+      index: 4,
+    },
+  ]);
 
   const [orderStages, setOrderStages] = useState([
     {
@@ -174,6 +244,9 @@ export const AuthProvider = ({ children }) => {
         setComments,
         orderStages,
         setOrderStages,
+        userList,
+        setUserList,
+        userOrders,
       }}
     >
       {children}

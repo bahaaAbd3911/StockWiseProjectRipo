@@ -35,6 +35,7 @@ function ClientProductsPage() {
       <div style={{ overflowX: "hidden" }}>
         <UserSettings />
         <SearchBar value={0} />
+
         <Advertisement data={data} />
         <div
           className={`${searchAndResultContainerClass} ${lang === "arb" && arbSearchAndResultContainerClass}`}

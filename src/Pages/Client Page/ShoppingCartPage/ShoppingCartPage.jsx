@@ -11,6 +11,7 @@ import Footer from "../../../Components/Footer/Footer";
 import Filter from "../../../Components/Filter/Filter";
 import Products from "../../../Components/Products/Products";
 import Header from "../../../Components/Header/Header";
+import ClientList from "../../../Components/ClientList/ClientList";
 
 // Import Image
 import img1 from "../../../Images/ShoppingCart/cartLogo.png";
@@ -26,8 +27,6 @@ function ShoppingCartPage() {
   return (
     <>
       <div className={FavoritePageContainerClass}>
-        <UserSettings />
-        <SearchBar value={1} />
         <Header
           icon={"fa-solid fa-cart-shopping"}
           title={"My Shopping Cart"}

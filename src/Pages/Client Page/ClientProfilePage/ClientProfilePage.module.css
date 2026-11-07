@@ -1,1 +1,56 @@
-.ClientProfilePageConatinerClass {}
+.ClientProfilePageConatinerClass {
+    background-color: #eee;
+}
+
+.darkClientProfilePageConatinerClass {
+    background-color: var(--darkBackground);
+}
+
+.ProfileContainerClass {}
+
+.componentsContainerClass {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    width: 95%;
+    margin: auto;
+}
+
+
+.ordersAndInfoContainerClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    grid-template-areas: "ClientPersonalInfo RecentOrders";
+}
+
+.arbProfileContainerClass {
+    direction: rtl;
+}
+
+.darkProfileContainerClass {
+    background-color: var(--darkBackground);
+}
+
+@media (max-width:1050px) {
+    .ordersAndInfoContainerClass {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        grid-template-areas: "ClientPersonalInfo ClientPersonalInfo""RecentOrders RecentOrders";
+    }
+}
+
+@media (max-width:810px) {
+    .componentsContainerClass {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr;
+        /* justify-content: center; */
+        /* align-items: flex-start; */
+    }
+}
