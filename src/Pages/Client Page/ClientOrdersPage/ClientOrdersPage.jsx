@@ -9,44 +9,21 @@ import {
 import { useState, useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 
+// import Objects
+import { ordersListArray } from "../../../objects";
+
 // Import Components
 import UserOrdersMainInfo from "./UserOrdersMainInfo";
 import UserOrdersFilter from "./UserOrdersFilter";
 import Order from "./Order";
+import OrderDetails from "./OrderDetails";
 
 function ClientOrdersPage() {
   const { dark, lang, setSearchFilters, userList, setUserList } =
     useContext(AuthContext);
-  const [ordersList, setOrdersList] = useState([
-    {
-      orderState: "Delivered",
-      arbOrderState: "تم التوصيل",
-      orderNumber: 10,
-      orderTime: "7/10/2026",
-      orderImages: "",
-      orderCost: "100%",
-      orderItemsCount: "4",
-    },
-    {
-      orderState: "Shipping",
-      arbOrderState: "قيد الشحن",
-      orderNumber: 10,
-      orderTime: "7/10/2026",
-      orderImages: "",
-      orderCost: "100%",
-      orderItemsCount: "4",
-    },
-    {
-      orderState: "Pending",
-      arbOrderState: "على قائمة الانتظار",
-      orderNumber: 10,
-      orderTime: "7/10/2026",
-      orderImages: "",
-      orderCost: "100%",
-      orderItemsCount: "4",
-    },
-  ]);
+  const [ordersList, setOrdersList] = useState(ordersListArray);
 
+  const [selectedOrder, setSelectedOrder] = useState();
   function calcCount(list) {
     let length = list.length - 1;
     let counts = [0, 0, 0, 0];
@@ -107,22 +84,37 @@ function ClientOrdersPage() {
       ? true
       : order.orderState === choosenFilter.name,
   );
+
   return (
     <>
       <div
         className={`${ClientOrdersPageContainerClass} ${lang === "arb" && arbClientOrdersPageContainerClass}`}
       >
-        <UserOrdersMainInfo />
-        <UserOrdersFilter
-          filters={filters}
-          setFilters={setFilters}
-          ordersList={ordersList}
-        />
-        <div className={ordersListClass}>
-          {filteredList.map((item, index) => (
-            <Order item={item} key={index} />
-          ))}
-        </div>
+        {selectedOrder ? (
+          <OrderDetails
+            order={selectedOrder}
+            setSelectedOrder={setSelectedOrder}
+          />
+        ) : (
+          <>
+            <UserOrdersMainInfo />
+
+            <UserOrdersFilter
+              filters={filters}
+              setFilters={setFilters}
+              ordersList={ordersList}
+            />
+            <div className={ordersListClass}>
+              {filteredList.map((item, index) => (
+                <Order
+                  item={item}
+                  key={index}
+                  setSelectedOrder={setSelectedOrder}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </>
   );

@@ -20,7 +20,10 @@ import img1 from "../../../Images/AirFrier.jpg";
 // Import Hooks
 import { useState, useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
-function Order({ item }) {
+import { useNavigate } from "react-router";
+
+function Order({ item, setSelectedOrder }) {
+  let navigate = useNavigate();
   const { dark, lang, setSearchFilters, userList, setUserList } =
     useContext(AuthContext);
 
@@ -72,6 +75,9 @@ function Order({ item }) {
         </div>
         <div
           className={`${orderViewDetailsBtnClass} ${lang === "arb" && arborderViewDetailsBtnClass}`}
+          onClick={() => {
+            setSelectedOrder(item);
+          }}
         >
           <div>
             <i className="fa-solid fa-eye"></i>
