@@ -25,8 +25,17 @@ import { AuthContext } from "../../../../context/AuthContext";
 import FormHeader from "../FormHeader";
 import Icon from "../../../../Components/Icon/Icon";
 
+import { submitOrderValidation } from "../../../../randomFunctions";
+
 function PlaceOrder({ setSelectedStage, selectedStage }) {
-  const { dark, lang, orderStages, setOrderStages } = useContext(AuthContext);
+  const {
+    dark,
+    lang,
+    orderStages,
+    setOrderStages,
+    orderFormFields,
+    setorderFormFields,
+  } = useContext(AuthContext);
 
   return (
     <>
@@ -48,11 +57,18 @@ function PlaceOrder({ setSelectedStage, selectedStage }) {
                 </div>
               </div>
               <div className={formDataClass}>
-                <div>{lang === "arb" ? "اسم المستخدم" : "User Name"}</div>
                 <div>
-                  {lang === "arb" ? "رقم هاتف المستخدم" : "User Phone Number"}
+                  {lang === "arb" ? "اسم المستخدم" : "User Name: "}
+                  {orderFormFields[0].data}
                 </div>
-                <div>{lang === "arb" ? "الموقع" : "User Location"}</div>
+                <div>
+                  {lang === "arb" ? "رقم هاتف المستخدم" : "User Phone Number: "}
+                  {orderFormFields[1].data}
+                </div>
+                <div>
+                  {lang === "arb" ? "الموقع" : "User Location: "}
+                  {orderFormFields[2].data}
+                </div>
               </div>
             </div>
 
@@ -74,14 +90,12 @@ function PlaceOrder({ setSelectedStage, selectedStage }) {
               </div>
 
               <div className={formDataClass}>
-                <div>
-                  {lang === "arb" ? "الدفع عند التسليم" : "Cash On Delivery"}
-                </div>
-                <div>
+                <div>Payment Method: {orderFormFields[7].data}</div>
+                {/* <div>
                   {lang === "arb"
                     ? "ادفع عند استلام طلبك"
                     : "Pay When You Receive Your Order"}
-                </div>
+                </div> */}
               </div>
             </div>
             <div className={editBtnClass}>
@@ -122,7 +136,50 @@ function PlaceOrder({ setSelectedStage, selectedStage }) {
 
           <div
             onClick={() => {
-              setSelectedStage(orderStages[2]);
+              submitOrderValidation(orderFormFields, setorderFormFields);
+              if (orderFormFields.some((field) => field.flag === true)) {
+                if (
+                  orderFormFields[0].flag ||
+                  orderFormFields[1].flag ||
+                  orderFormFields[2].flag ||
+                  orderFormFields[3].flag ||
+                  orderFormFields[5].flag ||
+                  orderFormFields[6].flag
+                ) {
+                  setOrderStages((prev) => {
+                    let updated = [...prev];
+                    updated[0].alert = true;
+                    return updated;
+                  });
+                } else {
+                  setOrderStages((prev) => {
+                    let updated = [...prev];
+                    updated[0].alert = false;
+                    return updated;
+                  });
+                }
+                if (orderFormFields[7].flag) {
+                  setOrderStages((prev) => {
+                    let updated = [...prev];
+                    updated[1].alert = true;
+                    return updated;
+                  });
+                } else {
+                  setOrderStages((prev) => {
+                    let updated = [...prev];
+                    updated[1].alert = false;
+                    return updated;
+                  });
+                }
+              } else {
+                setOrderStages((prev) => {
+                  let updated = [...prev];
+                  updated[1].alert = false;
+                  updated[0].alert = false;
+                  return updated;
+                });
+                // Post To Database
+              }
             }}
           >
             <div>

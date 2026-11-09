@@ -6,6 +6,8 @@ import {
   borderClass,
   barClass,
   activeStageContainerClass,
+  alertColorClass,
+  infoClass,
 } from "./PurchaseConfirmation.module.css";
 
 // Import Hooks
@@ -17,18 +19,21 @@ function ActiveComponent({ selectedStage, setSelectedStage, orderStages }) {
 
   return (
     <>
-      <div className={ActiveComponentContainerClass}>
+      <div className={`${ActiveComponentContainerClass}`}>
         <div className={orderStagesContainerClass}>
           {orderStages.map((stage, index) => (
             <div
-              className={`${stageContainerClass} ${selectedStage.name === stage.name ? activeStageContainerClass : ""}`}
+              className={`${stageContainerClass} ${selectedStage.name === stage.name ? activeStageContainerClass : ""}  `}
               key={index}
               onClick={() => {
                 setSelectedStage(stage);
               }}
             >
-              <div>{stage.num}</div>
-              <div>{lang === "arb" ? stage.arbName : stage.name}</div>
+              <div className={infoClass}>
+                <div>{stage.num}</div>
+                <div>{lang === "arb" ? stage.arbName : stage.name}</div>
+              </div>
+              <div className={`${stage.alert && alertColorClass}`}></div>
             </div>
           ))}
         </div>

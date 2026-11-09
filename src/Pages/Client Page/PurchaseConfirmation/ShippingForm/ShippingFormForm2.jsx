@@ -6,6 +6,8 @@ import {
   listContainerClass,
   choosenItemClass,
   darkSubFormClass,
+  errorMsgClass,
+  beforeLastClass,
 } from "./ShippingForm.module.css";
 
 // Import Hooks
@@ -25,7 +27,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../context/AuthContext";
 
 function ShippingFormForm2() {
-  const { dark, lang } = useContext(AuthContext);
+  const { dark, lang, setorderFormFields, orderFormFields } =
+    useContext(AuthContext);
 
   const [jordanianAreas, setJordanianAreas] = useState(jordanianAreasList);
   const [jordanianCities, setJordanianCities] = useState(jordanianCitiesList);
@@ -49,12 +52,18 @@ function ShippingFormForm2() {
               <span>*</span>
             </div>
             <div
-              className={choosenItemClass}
+              className={`${choosenItemClass} ${beforeLastClass}`}
               onClick={() => {
                 setOpenCities((prev) => !prev);
               }}
             >
-              <div>{lang === "arb" ? "اختر المدينة" : "Choose City"}</div>
+              <div>
+                {orderFormFields[3].data
+                  ? orderFormFields[3].data
+                  : lang === "arb"
+                    ? "اختر المدينة"
+                    : "Choose City"}
+              </div>
               <div>
                 {openAreas && <i className="fa-solid fa-angle-up"></i>}
                 {!openAreas && <i className="fa-solid fa-chevron-down"></i>}
@@ -63,21 +72,38 @@ function ShippingFormForm2() {
             {openCities && (
               <div className={listContainerClass}>
                 {jordanianCities.map((city, index) => (
-                  <div key={index}>
+                  <div
+                    key={index}
+                    onClick={() => {
+                      setorderFormFields((prev) => {
+                        let updated = [...prev];
+                        updated[3].data = city.cityName;
+                        updated[3].flag = false;
+                        updated[3].errorMsg = "";
+                        updated[3].arbErrorMsg = "";
+                        return updated;
+                      });
+                    }}
+                  >
                     {lang === "arb" ? city.arbCityName : city.cityName}
                   </div>
                 ))}
               </div>
             )}
+            <span className={errorMsgClass}>
+              {lang === "arb"
+                ? orderFormFields[3].arbErrorMsg
+                : orderFormFields[3].errorMsg}
+            </span>
           </div>
 
-          <div className={FormInputContainerClass}>
+          {/* <div className={FormInputContainerClass}>
             <div>
               <label>{lang === "arb" ? "المنطقة" : "Area"}</label>
               <span>*</span>
             </div>
             <div
-              className={choosenItemClass}
+              className={`${choosenItemClass} ${beforeLastClass}`}
               onClick={() => {
                 setOpenAreas((prev) => !prev);
               }}
@@ -91,13 +117,34 @@ function ShippingFormForm2() {
             {openAreas && (
               <div className={listContainerClass}>
                 {jordanianAreas.map((area, index) => (
-                  <div key={index}>
-                    {lang === "arb" ? area.arbAreaName : area.areaName}
+                  <div
+                    key={index}
+                    onClick={() => {
+                      setorderFormFields((prev) => {
+                        let updated = [...prev];
+                        updated[4].data = area.areaName;
+                        updated[4].flag = false;
+                        updated[4].errorMsg = "";
+                        updated[4].arbErrorMsg = "";
+                        return updated;
+                      });
+                    }}
+                  >
+                    {orderFormFields[4].data
+                      ? orderFormFields[4].data
+                      : lang === "arb"
+                        ? area.arbAreaName
+                        : area.areaName}
                   </div>
                 ))}
               </div>
             )}
-          </div>
+            <span className={errorMsgClass}>
+              {lang === "arb"
+                ? orderFormFields[4].arbErrorMsg
+                : orderFormFields[4].errorMsg}
+            </span>
+          </div> */}
 
           <div className={FormInputContainerClass}>
             <div>
@@ -106,11 +153,22 @@ function ShippingFormForm2() {
               </label>
               <span>*</span>
             </div>
-            <div>
+            <div className={`${beforeLastClass}`}>
               <span>
                 <i className="fa-solid fa-at"></i>
               </span>
               <input
+                value={orderFormFields[5].data}
+                onChange={(e) => {
+                  setorderFormFields((prev) => {
+                    let updated = [...prev];
+                    updated[5].data = e.target.value;
+                    updated[5].flag = false;
+                    updated[5].errorMsg = "";
+                    updated[5].arbErrorMsg = "";
+                    return updated;
+                  });
+                }}
                 placeholder={
                   lang === "arb"
                     ? "أدخل تفاصيل الموقع لنتمكن من الوصول اليك"
@@ -118,6 +176,11 @@ function ShippingFormForm2() {
                 }
               />
             </div>
+            <span className={errorMsgClass}>
+              {lang === "arb"
+                ? orderFormFields[5].arbErrorMsg
+                : orderFormFields[5].errorMsg}
+            </span>
           </div>
         </div>
       </div>

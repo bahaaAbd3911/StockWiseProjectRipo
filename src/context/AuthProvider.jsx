@@ -106,6 +106,7 @@ export const AuthProvider = ({ children }) => {
       isSelected: true,
       width: "33%",
       label: "Shipping",
+      alert: false,
     },
     {
       num: 2,
@@ -114,6 +115,7 @@ export const AuthProvider = ({ children }) => {
       isSelected: false,
       width: "66%",
       label: "Payment",
+      alert: false,
     },
     {
       num: 3,
@@ -122,6 +124,7 @@ export const AuthProvider = ({ children }) => {
       isSelected: false,
       width: "100%",
       label: "Review",
+      alert: false,
     },
   ]);
 
@@ -224,6 +227,64 @@ export const AuthProvider = ({ children }) => {
     },
   ]);
 
+  const [orderFormFields, setorderFormFields] = useState([
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 0,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 1,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 2,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 3,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 4,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 5,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 6,
+    },
+    {
+      data: "",
+      flag: false,
+      errorMsg: "",
+      arbErrorMsg: "",
+      index: 7,
+    },
+  ]);
   return (
     <AuthContext.Provider
       value={{
@@ -247,6 +308,8 @@ export const AuthProvider = ({ children }) => {
         userList,
         setUserList,
         userOrders,
+        orderFormFields,
+        setorderFormFields,
       }}
     >
       {children}

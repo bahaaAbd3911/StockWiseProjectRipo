@@ -11,6 +11,7 @@ import {
   DeliveredOrderContainerClass,
   ShippingOrderContainerClass,
   PendingOrderContainerClass,
+  darkOrderContainerClass,
 } from "./ClientOrdersPage.module.css";
 
 // Import Images
@@ -27,6 +28,7 @@ function Order({ item }) {
     <>
       <div
         className={`${OrderContainerClass} 
+        ${dark && darkOrderContainerClass} 
         ${item.orderState === "Delivered" && DeliveredOrderContainerClass} 
         ${item.orderState === "Shipping" && ShippingOrderContainerClass} 
         ${item.orderState === "Pending" && PendingOrderContainerClass}`}

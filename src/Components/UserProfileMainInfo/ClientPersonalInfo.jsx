@@ -11,7 +11,7 @@ import {
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
-function ClientPersonalInfo() {
+function ClientPersonalInfo({ setOpen }) {
   const { lang, dark } = useContext(AuthContext);
   return (
     <>
@@ -59,7 +59,12 @@ function ClientPersonalInfo() {
             <div>0770462578</div>
           </div>
         </div>
-        <div className={ClientPersonalInfoEditBtnClass}>
+        <div
+          className={ClientPersonalInfoEditBtnClass}
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
           <div>
             <i className="fa-solid fa-pen"></i>
           </div>

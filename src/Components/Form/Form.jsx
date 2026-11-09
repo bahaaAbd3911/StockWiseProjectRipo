@@ -35,7 +35,6 @@ function Form({
   setImage,
   image,
 }) {
-  // console.log(image);
   const navigate = useNavigate();
 
   const { lang, dark } = useContext(AuthContext);

@@ -28,6 +28,8 @@ function PurchaseConfirmation() {
   const { dark, lang, orderStages, setOrderStages } = useContext(AuthContext);
 
   const [selectedStage, setSelectedStage] = useState(orderStages[0]);
+
+  const [alert, setAlert] = useState([false, false]);
   return (
     <>
       <div

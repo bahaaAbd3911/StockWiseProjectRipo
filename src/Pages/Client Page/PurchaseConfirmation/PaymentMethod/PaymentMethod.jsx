@@ -4,6 +4,7 @@ import {
   paymentMethodsConatinerClass,
   btnContainerClass,
   NightBtnContainerClass,
+  errorMsgClass,
 } from "./PaymentMethod.module.css";
 // Import Icons
 import creditCard from "../../../../Images/Icon/contactless.png";
@@ -22,7 +23,8 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../../../context/AuthContext";
 
 function PaymentMethod({ setSelectedStage, selectedStage }) {
-  const { lang, orderStages, dark } = useContext(AuthContext);
+  const { lang, orderStages, dark, orderFormFields, setorderFormFields } =
+    useContext(AuthContext);
 
   const methods = [
     {
@@ -67,6 +69,11 @@ function PaymentMethod({ setSelectedStage, selectedStage }) {
             <Method method={method} key={index} />
           ))}
         </div>
+        <span className={errorMsgClass}>
+          {lang === "arb"
+            ? orderFormFields[7].arbErrorMsg
+            : orderFormFields[7].errorMsg}
+        </span>
         <div
           className={`${btnContainerClass} ${!dark && NightBtnContainerClass}`}
         >
