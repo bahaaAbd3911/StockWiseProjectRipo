@@ -1,0 +1,54 @@
+.EmptyMessageContainerClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    grid-area: result;
+    background-color: #ef44443f;
+    background-color: rgba(128, 128, 128, 0.142);
+    padding: 20px;
+    margin: 20px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+
+
+}
+
+.arbEmptyMessageContainerClass {
+    flex-direction: row-reverse;
+}
+
+.darkEmptyMessageContainerClass {
+    color: white;
+}
+
+.EmptyMessageContainerClass>div:last-child {
+    width: 500px;
+    height: 100%;
+}
+
+.EmptyMessageImageClass {
+    height: 500px;
+    width: 500px;
+}
+
+.EmptyMessageImageClass img {
+    height: 100%;
+    width: 100%;
+}
+
+.btnClass {
+    height: 25px;
+    width: 200px;
+    background-color: var(--mainButtonColor);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}

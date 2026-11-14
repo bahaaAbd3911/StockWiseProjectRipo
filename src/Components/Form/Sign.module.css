@@ -1,0 +1,185 @@
+.mainFormContainerClass {}
+
+.errorAlarmClass {
+    color: red;
+    margin: 10px;
+}
+
+.inputFieldContainerClass {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    height: 100px;
+}
+
+.arbFormContainerClass {
+    direction: rtl;
+}
+
+.inputFieldContainerClass>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--borderColor);
+    padding: 5px;
+    border-radius: 10px;
+    gap: 10px;
+    min-width: 200px;
+    width: 100%;
+    height: 50px;
+}
+
+.inputFieldContainerClass>div:first-child div {
+    border-left: 1px solid var(--borderColor);
+    padding-left: 10px;
+    /* border-left: none;
+    padding-left: 0; */
+
+}
+
+.inputFieldContainerClass>div input {
+    border: none;
+    height: 30px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.inputFieldContainerClass>div input:focus {
+    outline: none;
+}
+
+.formContainerClass {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+@media (max-width: 750) {
+    .formContainerClass {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+    }
+}
+
+.darkFormContainerClass {
+    background-color: var(--darkBackground);
+    color: white;
+}
+
+.darkLinksContainerClass>div {
+    color: rgb(0, 153, 255) !important;
+}
+
+.darkFormContainerClass input {
+    background-color: var(--darkBackground);
+    color: white;
+}
+
+.formHeaderClass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formTitleClass {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.formWelcommingMsgClass {
+    font-size: 20px;
+    color: var(--secondTextColor);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputsContainerClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+}
+
+.buttonContainerClass {}
+
+.buttonContainerClass button {
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--mainButtonColor);
+    color: white;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.buttonContainerClass button:focus {
+    outline: none;
+}
+
+
+.linksContainerClass {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.linksContainerClass div {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.imageContainerClass {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.imageContainerClass img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+@media (max-width:750px) {
+    .inputsContainerClass {
+        flex-direction: column;
+    }
+
+    .inputFieldContainerClass {
+        width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .formContainerClass {
+        width: 95%;
+    }
+}

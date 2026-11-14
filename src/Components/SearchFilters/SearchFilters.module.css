@@ -1,0 +1,231 @@
+.SearchFiltersContainerClass {
+
+    width: 100%;
+    /* padding: 20px; */
+    grid-area: filter;
+}
+
+.darkSearchFiltersContainerClass>* {
+    color: white;
+}
+
+.arbSearchFiltersContainerClass {
+    direction: rtl;
+}
+
+.filtersContainerClass {
+    border: 1px solid var(--borderColor);
+    box-shadow: 0 0 3px 0.5px gray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.filterContainerClass h4 {
+    border-bottom: 1px solid var(--borderColor);
+    padding-bottom: 15px;
+}
+
+.darkFilterContainerClass h4 {
+    color: white !important;
+}
+
+/* Category Style */
+
+.categoryContaienrClass {
+    height: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.darkCategoryContaienrClass>* {
+    color: white;
+}
+
+.selectedCategoryContaienrClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.iconAndNameContainerClass {
+    display: flex;
+    gap: 5px;
+}
+
+.categoriesContainerClass {
+    height: 150px;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+
+.categoryContaienrClass:hover {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+
+.categoryIconClass {}
+
+.categoryNameClass {}
+
+.categoryCountClass {
+    color: var(--secondTextColor);
+}
+
+/* Price Filter Style */
+
+.priceRangeFilter {
+    width: 100%;
+    color: var(--textColor, #0f172a);
+}
+
+.price-range-filter h4 {
+    margin: 0 0 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.price-slider {
+    margin: 0 0 22px;
+}
+
+.price-slider .rc-slider-rail {
+    height: 6px;
+    background-color: var(--sliderRail, #e2e8f0);
+    border-radius: 10px;
+}
+
+.price-slider .rc-slider-track {
+    height: 6px;
+    background-color: var(--mainButtonColor, #00c875);
+    border-radius: 10px;
+}
+
+.price-slider .rc-slider-handle {
+    width: 12px;
+    height: 12px;
+    margin-top: -3px;
+    background-color: var(--mainButtonColor, #00c875);
+    border: 2px solid var(--mainButtonColor, #00c875);
+    box-shadow: none;
+    opacity: 1;
+}
+
+.price-slider .rc-slider-handle:hover,
+.price-slider .rc-slider-handle:active {
+    border-color: var(--mainButtonColor, #00c875);
+    box-shadow: 0 0 0 5px rgb(0 200 117 / 15%);
+}
+
+.priceInputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.priceInputs label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    height: 34px;
+    padding: 0 8px;
+    border: 1px solid var(--inputBorder, #e2e8f0);
+    border-radius: 7px;
+    background: var(--inputBackground, #fff);
+}
+
+.priceInputs label span {
+    font-size: 12px;
+    color: var(--mutedText, #64748b);
+}
+
+.priceInputs input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 12px;
+}
+
+.priceInputs input:focus-visible {
+    /* outline: 2px solid var(--mainButtonColor, #00c875); */
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+/* Dark theme */
+[data-theme="dark"] .price-range-filter {
+    --textColor: #f8fafc;
+    --sliderRail: #334155;
+    --inputBorder: #334155;
+    --inputBackground: #152538;
+    --mutedText: #94a3b8;
+}
+
+
+/* Rating Filter */
+.filterContainerClass {
+    /* width: 20%;
+    margin: auto;
+    padding: 20px; */
+}
+
+.rateContainerClass {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.arbRateContainerClass {
+    direction: rtl;
+}
+
+.activeRateContainerClass {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.goldenStarClass {
+    color: gold !important;
+}
+
+.notGoldenStarClass {
+    color: #e2e8f0;
+}
+
+/* In Stock */
+
+.inStockContainerClass {
+    display: flex;
+    gap: 10px;
+}
+
+.checkBoxClass {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--borderColor);
+    background-color: var(--mainButtonColor);
+    color: white;
+    cursor: pointer;
+}
+
+.notCheckedCheckBoxClass {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--borderColor);
+    cursor: pointer;
+}

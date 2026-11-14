@@ -1,0 +1,169 @@
+.SearchBarContainerClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* margin-top: 100px; */
+}
+
+.inputContainerClass {
+    width: 80%;
+}
+
+.inputContainerClass input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    color: black;
+    min-width: 200px;
+}
+
+.inputContainerClass input:focus {
+    outline: none;
+}
+
+.SearchBarContainerClass>div {
+    display: flex;
+}
+
+.SearchBarLangIsArbContainerClass {
+    flex-direction: row;
+    direction: rtl;
+}
+
+.searchAndIconsContainerClass .cartAndFavoriteContainerClass {
+    display: flex;
+    gap: 15px;
+    color: black;
+    align-items: center;
+}
+
+.cartAndFavoriteContainerClass>div {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cartAndFavoriteContainerClass .heartLoveClass:hover {
+    color: pink;
+}
+
+.cartAndFavoriteContainerClass .shoppingCartClass:hover {
+    color: rgb(255, 200, 0);
+}
+
+.cartAndFavoriteContainerClass>div i {
+    font-size: 20px;
+}
+
+.cartAndFavoriteContainerClass>div:last-child {
+    position: relative;
+
+}
+
+.shoppingCartClass {
+    position: relative;
+}
+
+.heartLoveClass {
+    position: relative;
+}
+
+.heartLoveClass span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--mainButtonColor);
+    position: absolute;
+    top: -25%;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+}
+
+.shoppingCartClass span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--mainButtonColor);
+    position: absolute;
+    top: -25%;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+}
+
+.logoContainerClass {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    min-width: 200px;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.logoContainerClass div:first-child {
+    color: var(--mainButtonColor);
+    font-size: 40px;
+}
+
+.logoContainerClass div:last-child {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.logoContainerClass div:last-child span {
+    color: var(--mainButtonColor);
+}
+
+.searchAndIconsContainerClass {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logoDarkClass {
+    color: white;
+}
+
+.searchAndIconsContainerClass .cartAndFavoriteContainerDarkClass {
+    color: white;
+}
+
+.profileBtnContainerClass {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.profileBtnContainerClass img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.heartLoveClass {}
+
+.shoppingCartClass {}
+
+@media (max-width : 400px) {
+    .searchAndIconsContainerClass {
+        width: 100%;
+    }
+}

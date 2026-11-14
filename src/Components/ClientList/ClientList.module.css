@@ -1,0 +1,38 @@
+.ClientListContainerClass {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    margin: 20px;
+    min-width: 200px;
+    height: fit-content;
+    margin: 0 auto;
+
+}
+
+.itemContaienrClass {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: all 0.5s;
+    width: 100%;
+    min-width: 180px;
+}
+
+.activeItemClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+    border-radius: 10px;
+}
+
+.darkClientListContainerClass {
+    background-color: var(--cardDark);
+    color: white;
+}
+
+.arbClientListContainerClass {
+    direction: rtl;
+}

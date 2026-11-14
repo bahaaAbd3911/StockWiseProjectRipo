@@ -1,0 +1,175 @@
+@keyframes moving {
+    0% {
+        transform: translate(-10%, -50%);
+    }
+
+    50% {
+        transform: translate(30%, -50%);
+    }
+
+    100% {
+        transform: translate(-10%, -50%);
+    }
+}
+
+@keyframes arbMoving {
+    0% {
+        transform: translate(-65%, -50%);
+    }
+
+    50% {
+        transform: translate(-100%, -50%);
+    }
+
+    100% {
+        transform: translate(-65%, -50%);
+    }
+}
+
+
+/* #123B32 */
+.darkAdvertisementContainerClass {
+    background-color: #3c495ad4 !important;
+    color: white;
+}
+
+.darkAdvertisementContainerClass .infoContainerClass div span {
+    color: white !important;
+}
+
+.darkAdvertisementContainerClass>* {}
+
+.AdvertisementContainerClass {
+    height: 300px;
+    width: 90%;
+    min-width: 200px;
+    background-color: #e9f8f0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.infoContainerClass {
+    width: 45%;
+    min-width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.infoContainerClass div {
+    color: var(--secondTextColor);
+}
+
+.infoContainerClass div span {
+    color: black;
+    font-weight: bold;
+}
+
+.infoContainerClass h1 {
+    width: 100%;
+    max-width: 550px;
+}
+
+.infoContainerClass button {
+    height: 40px;
+    width: 30%;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--mainButtonColor);
+    color: var(--mainButtonColor);
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+
+
+.infoContainerClass button span {
+    position: relative;
+}
+
+.infoContainerClass button span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+}
+
+.infoContainerClass button:hover span i {
+
+    animation: moving 0.7s infinite;
+}
+
+.arbicAdvertisementContainerClass button span i {
+    transform: translate(-65%, -50%);
+
+}
+
+.arbicAdvertisementContainerClass button:hover span i {
+    animation: arbMoving 0.7s infinite;
+}
+
+.infoContainerClass button:hover {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.imageClass {
+    width: 45%;
+    height: 100%;
+
+}
+
+.imageClass img {
+    width: 100%;
+    height: 100%;
+}
+
+.arbicAdvertisementContainerClass {
+    flex-direction: row-reverse;
+}
+
+.arbicAdvertisementContainerClass .infoContainerClass {
+    direction: rtl;
+
+}
+
+
+@media (max-width:950px) {
+    .infoContainerClass, .imageClass {
+        width: 100%;
+        align-items: center;
+        max-height: 500px;
+    }
+
+    .AdvertisementContainerClass {
+        height: fit-content;
+    }
+
+    .infoContainerClass button {
+        width: 40%;
+    }
+
+}
+
+
+@media (max-width:450px) {
+    .AdvertisementContainerClass {
+        justify-content: center;
+    }
+
+    .infoContainerClass button {
+        width: 70%;
+    }
+}

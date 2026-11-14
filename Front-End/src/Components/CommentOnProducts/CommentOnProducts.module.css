@@ -1,0 +1,268 @@
+.CommentOnProductsContainerClass {
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.darkCommentOnProductsContainerClass {
+    color: white;
+}
+
+.arbCommentOnProductsContainerClass {
+    direction: rtl;
+}
+
+.AddCommentContainerClass {}
+
+.addReviewContainerClass {}
+
+.commentStaticsAddCommentContainerClass {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    display: flex;
+    gap: 15px;
+}
+
+h4 {
+    color: var(--secondTextColor)
+}
+
+/* Comments Style */
+
+.commentsSectionContainerClass {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.162);
+    margin: 20px auto;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.commentsContainerClass {
+
+    height: 700px;
+    overflow-y: scroll;
+}
+
+
+.CommentContainerClass {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.162);
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    gap: 10px;
+}
+
+@media (max-width:1015px) {
+    .CommentContainerClass {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .CommentContainerClass>* {
+        text-align: center;
+    }
+
+
+    .commentWriterRateAndTimeClass {
+        justify-content: center;
+
+    }
+}
+
+/* Comments Filter Style */
+.CommentsFilterContianerClass {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(128, 128, 128, 0.108);
+    border-radius: 15px;
+}
+
+.CommentsFilterContianerClass>div {
+    border: 1px solid black !important;
+    color: black !important;
+    padding: 10px;
+    border-radius: 35px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.darkCommentsFilterContianerClass>div {
+    border: 1px solid white !important;
+    color: white !important;
+
+}
+
+.activeFilterClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+    border: 1px solid white !important;
+}
+
+.commentWriterImageClass {
+    height: 75px;
+    width: 75px;
+}
+
+.commentWriterImageClass img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.commentContentContainerClass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commentWriterNameClass {}
+
+.commentWriterRateAndTimeClass {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.commentWriterDescreptionClass {}
+
+.commentLikesCountClass {
+    display: flex;
+    gap: 5px;
+}
+
+.commentLikesCountClass>div:first-child {
+    display: flex;
+    gap: 5px;
+    color: var(--mainButtonColor);
+}
+
+.commentTimeClass {}
+
+.commentRateClass {}
+
+
+.goldenStarClass {
+    color: var(--mainButtonColor) !important;
+}
+
+.notGoldenStarClass {
+    color: #e2e8f0;
+}
+
+/* Add Comment Form Style */
+
+.AddCommentFormContainerClass {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+
+
+}
+
+.morningAddCommentFormContainerClass textarea {
+    color: black !important;
+}
+
+.arbAddCommentFormContainerClass {
+    direction: rtl;
+}
+
+.userDataContainerClass {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    height: 10px;
+}
+
+.textAreaContainerClass {
+    height: 200px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    position: relative;
+    width: 95%;
+    min-width: 200px;
+}
+
+.textAreaContainerClass textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    background-color: #22c55e2f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    resize: none;
+    border: none;
+
+}
+
+.textAreaContainerClass textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.btnContainerClass {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btnContainerClass div {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--mainButtonColor);
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.btnContainerClass div:hover {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.closeBtnClass {
+    height: 25px;
+    width: 100%;
+    background-color: var(--failedColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* border-radius: 15px; */
+}

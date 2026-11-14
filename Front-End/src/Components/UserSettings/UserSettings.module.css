@@ -1,0 +1,161 @@
+.userSettingsContainerClass {
+    background-color: var(--darkBackground);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+    z-index: 1000;
+
+}
+
+
+.startScrollClass {
+    position: fixed;
+    width: 100%;
+}
+
+.userSettingsContainerClass>div {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    /* min-width: 150px; */
+}
+
+
+
+
+
+.activeModeClass {
+    background-color: #22c55e !important;
+    color: white !important;
+    /* box-shadow: 0 0 5px 1px var(--mainButtonColor); */
+}
+
+.DarkModeButtonClass {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--mainTextColor);
+    overflow: hidden;
+    background-color: #22c55e3a;
+    /* padding: 2px; */
+}
+
+.DarkModeButtonClass>div {
+    /* background-color: white; */
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+.chooseLanguageClass {
+    /* background-color: #22c55e3a; */
+
+    color: white;
+    padding: 2px;
+    cursor: pointer;
+    transition: all 0.3s
+}
+
+.activeLangClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+    border-radius: 5px;
+}
+
+.userSettingsContainerArbClass {
+    flex-direction: row-reverse;
+}
+
+.settingArbClass {
+    flex-direction: row-reverse;
+
+}
+
+.darkBgClass {
+
+    background-color: rgb(79, 79, 79);
+}
+
+.signSettingsClass {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.signSettingsClass>div {
+    cursor: pointer;
+}
+
+.listContainerClass {
+    position: absolute;
+    top: 150%;
+    background-color: white;
+    color: black;
+    width: 85%;
+    z-index: 2000;
+}
+
+.listContainerClass div {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.listContainerClass div:first-child {
+    color: var(--mainButtonColor);
+    transition: all 0.3s;
+}
+
+.listContainerClass div:first-child:hover {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.listContainerClass div:last-child {
+    color: var(--failedColor);
+    transition: all 0.3s;
+}
+
+.listContainerClass div:last-child:hover {
+    background-color: var(--failedColor);
+    color: white;
+}
+
+.chooseLanguageContainerClass {
+    height: 30px;
+    width: 100px;
+    justify-content: center;
+    border-radius: 10px;
+
+    overflow: hidden;
+    background-color: #22c55e3a;
+
+}
+
+.chooseLanguageContainerClass>div {
+    height: 90% !important;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none !important;
+    border-radius: 5px;
+}

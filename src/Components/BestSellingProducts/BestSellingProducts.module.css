@@ -1,0 +1,16 @@
+.BestSellingProductsContainerClass {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.arbItemsListContainerClass {
+    flex-direction: row-reverse;
+}
+
+.itemsListContainerClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}

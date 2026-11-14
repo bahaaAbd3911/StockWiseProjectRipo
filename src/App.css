@@ -1,0 +1,11 @@
+.appContainer {
+  max-width: 2000px;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}

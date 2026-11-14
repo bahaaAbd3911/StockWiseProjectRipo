@@ -1,0 +1,108 @@
+.featuredCategoriesContainerClass {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.featuredCategoriesClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+
+.featureContainerClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border: 1px solid rgb(225, 223, 223);
+    padding: 15px;
+    height: 140px;
+    width: 120px;
+    background-color: #f8fbfd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.featuredCategoriesHeadClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.featuredCategoriesHeadClass>div {}
+
+.featureContainerClass .categoryIconClass {
+    font-size: 30px;
+}
+
+.featureContainerClass:hover {
+    /* border: 1px solid var(--mainButtonColor); */
+    box-shadow: 0 0 5px 0px var(--mainButtonColor);
+
+
+}
+
+.featureContainerClass:hover .categoryIconClass, .featureContainerClass:hover .categoryNameClass {
+    color: var(--mainButtonColor);
+}
+
+.featureContainerClass div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoryNameClass {
+    font-weight: bold;
+}
+
+.categoryCountClass {
+    color: var(--secondTextColor);
+}
+
+.viewAllButtonClass {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    color: var(--mainButtonColor);
+    cursor: pointer;
+}
+
+.arbFeaturedCategoriesHeadClass {
+    flex-direction: row-reverse;
+}
+
+.arbViewAllButtonClass {
+    flex-direction: row-reverse;
+}
+
+.darkFeaturedCategoriesContainerClass {}
+
+.darkFeaturedCategoriesContainerClass h2 {
+    color: white;
+}
+
+.darkFeatureContainerClass {
+    background-color: var(--cardDark);
+    color: var(--mainButtonColor);
+    border: 1px solid rgb(88, 88, 88);
+    transition: all 0.3s;
+}
+
+.darkFeatureContainerClass:hover {
+    border: 1px solid var(--mainButtonColor);
+    box-shadow: 0 0 5px 0px var(--mainButtonColor);
+}
+
+.darkFeatureContainerClass div:last-child div:last-child {}
+
+.arbFeaturedCategoriesClass {
+    flex-direction: row-reverse;
+}

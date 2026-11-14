@@ -1,0 +1,28 @@
+.componentHeaderClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.arbComponentHeaderClass {
+    flex-direction: row-reverse;
+}
+
+
+.viewAllButtonClass {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    color: var(--mainButtonColor);
+    cursor: pointer;
+}
+
+
+.arbViewAllButtonClass {
+    flex-direction: row-reverse;
+}
+
+.darkComponentHeaderClass h2 {
+    color: white;
+}

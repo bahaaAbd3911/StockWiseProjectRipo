@@ -1,0 +1,37 @@
+.ClientPageContainerClass {
+    margin: auto;
+    height: fit-content;
+}
+
+.ClientPageContainerDarkModeClass {
+    background-color: var(--darkBackground);
+    min-height: 100vh;
+}
+
+.searchAndResultContainerClass {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 270px repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "filter result result result result";
+    margin-top: 20px;
+}
+
+.arbSearchAndResultContainerClass {
+    direction: rtl;
+}
+
+
+@media (max-width:660px) {
+    .searchAndResultContainerClass {
+        width: 80%;
+        margin: auto;
+        grid-template-columns: 80%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "filter filter filter""result result result";
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+    }
+}

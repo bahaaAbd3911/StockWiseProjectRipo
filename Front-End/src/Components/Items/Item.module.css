@@ -1,0 +1,162 @@
+  .itemContainerClass {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 25px;
+      border: 1px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 450px;
+      border: 1px solid rgb(225, 223, 223);
+      background-color: #f8fbfd;
+      box-shadow: 0px 0px 3px 0px gray;
+      transition: all 0.3s;
+      cursor: pointer;
+  }
+
+  .itemContainerClass:hover {
+
+      box-shadow: 0 0 5px 0px var(--mainButtonColor);
+  }
+
+  .itemContainerClass:hover .itemNameClass {
+      color: var(--mainButtonColor);
+  }
+
+  .darkItemContainerClass:hover {
+      border: 1px solid var(--mainButtonColor);
+      box-shadow: 0 0 5px 0px var(--mainButtonColor);
+  }
+
+  .itemImgClass {
+      height: 250px;
+      width: 300px;
+      position: relative;
+  }
+
+  .itemImgClass img {
+      height: 100%;
+      width: 100%;
+  }
+
+  .itemNameClass {
+      font-weight: bolder;
+  }
+
+  .itemRatingClass {}
+
+  .itemRatingClass span:last-child {
+      color: gold;
+  }
+
+  .itemPriceClass {}
+
+  .itemContnentContainerClass {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      height: 150px;
+
+  }
+
+  .itemContnentContainerClass button {
+      height: 40px;
+      width: 100%;
+      background-color: var(--mainButtonColor);
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+  }
+
+
+
+  .itemContnentContainerClass button {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+
+      background: #16A34A;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 26px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+
+      transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* White wave */
+  .itemContnentContainerClass button::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+
+      width: 140%;
+      height: 200%;
+      left: -160%;
+      top: -50%;
+
+      background: white;
+      border-radius: 45% 55% 45% 55%;
+
+      transform: rotate(-15deg);
+      transition: left 0.6s ease;
+  }
+
+  .itemContnentContainerClass button:hover::before {
+      left: -20%;
+  }
+
+  .itemContnentContainerClass button:hover {
+      color: #15803D;
+      transform: translateY(-2px);
+  }
+
+  .itemContnentContainerClass button:active {
+      transform: translateY(0) scale(0.98);
+  }
+
+
+
+  .favoBtnClass {
+      position: absolute;
+      top: 3%;
+      left: 85%;
+      color: black;
+      font-size: 20px;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      background-color: rgb(234, 234, 234);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+
+  .favoBtnClass:hover {
+      color: white;
+      background-color: pink;
+  }
+
+  .darkItemContainerClass {
+      background-color: var(--cardDark);
+      color: white;
+      border: 1px solid var(--mainDarkBorder);
+  }
+
+  .outOfStockClass {
+      color: var(--secondTextColor);
+      text-decoration: line-through;
+  }
+
+  .priceAndStockStatusContainerClass {
+      display: flex;
+      justify-content: space-between;
+  }

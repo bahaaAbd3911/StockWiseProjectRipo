@@ -1,0 +1,75 @@
+.featuresContainerClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.featureContainerClass {
+    width: 20%;
+    min-width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.featureContainerClass:hover>div:first-child i {
+    box-shadow: 0 0 5px 0px var(--mainButtonColor);
+    color: var(--mainButtonColor);
+}
+
+.featureContainerClass:hover>div:last-child {
+    color: var(--mainButtonColor);
+}
+
+.featureContainerClass>div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureContainerClass>div:first-child i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+    background-color: rgb(235, 237, 237);
+    color: var(--mainTextColor);
+    border: 1px solid transparent;
+
+}
+
+
+.featureContainerClass div:last-child div {
+    font-weight: bold;
+}
+
+.featureContainerClass div:last-child span {
+    font-weight: light;
+    color: var(--secondTextColor);
+}
+
+.darkFeatureClass>div:first-child i {
+    background-color: #404b59d4;
+    color: var(--mainButtonColor);
+}
+
+.darkFeatureClass>div:last-child div {
+    color: white;
+}
+
+.arbFeaturesContainerClass {
+    flex-direction: row-reverse;
+}
+
+.arbFeaturesContainerClass .featureContainerClass {
+    flex-direction: row-reverse;
+}

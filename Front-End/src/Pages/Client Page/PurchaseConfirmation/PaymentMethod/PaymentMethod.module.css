@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+.paymentMethodsConatinerClass {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.errorMsgClass {
+    color: red;
+    margin-top: 5px;
+}
+
+.paymentMethodConatinerClass {
+    height: fit-content;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.403);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nightPaymentMethodConatinerClass {
+    box-shadow: 0 0 5px 0 #bccce0;
+}
+
+@media (max-width:760px) {
+    .paymentMethodConatinerClass {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.methodTitleClass {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.methodTitleClass div:first-child {
+    font-weight: bold;
+}
+
+.methodTitleClass div:last-child {
+    color: var(--secondTextColor);
+}
+
+.iconClass {}
+
+.methodContainerClass {}
+
+.leftSecConatinerClass {
+    display: flex;
+    gap: 15px;
+
+}
+
+.rightSecConatinerClass {}
+
+.activeMethodContainerClass {
+    background-color: #22c55e2c;
+    border: 3px solid var(--mainButtonColor);
+
+}
+
+.btnContainerClass {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.btnContainerClass>div {
+    height: 50px;
+    width: 210px;
+    gap: 10px;
+    background-color: var(--mainButtonColor);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex !important;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.NightBtnContainerClass {
+    color: white;
+}
+
+.activeMethodClass {
+    border: 3px solid var(--mainButtonColor);
+}
