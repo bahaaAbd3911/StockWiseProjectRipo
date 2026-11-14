@@ -1,0 +1,156 @@
+.OrderSummeryContainerClass {
+    padding: 5px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content !important;
+}
+
+.OrderSummeryContainerClass>div {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.darkOrderSummeryContainerClass {}
+
+.OrderSummeryHeadContainerClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.OrderSummeryHeadContainerClass>div:first-child {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.OrderSummeryHeadContainerClass>div:last-child {
+    color: var(--secondTextColor);
+    font-size: 15px;
+}
+
+.costsContainerClass {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.costClass {
+    display: flex;
+    justify-content: space-between;
+}
+
+.costClass div:last-child {
+    color: var(--secondTextColor);
+}
+
+.TotalClass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TotalClass div:first-child {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.TotalClass div:last-child {
+    font-weight: bolder;
+    font-size: 30px;
+    color: var(--mainButtonColor);
+}
+
+.productsContainerClass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.productClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productClass>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.productImageClass {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.productImageClass img {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.productInfoClass {}
+
+.productPriceAndCountClass {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.counterClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--borderColor);
+    width: 80px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.counterClass>div {
+    height: fit-content;
+    width: fit-content;
+}
+
+.checkBoxClass {
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--borderColor);
+    position: relative;
+    cursor: pointer;
+}
+
+.checkBoxClass i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--mainButtonColor);
+    font-size: 10px;
+}
+
+@media (max-width: 500px) {
+    .OrderSummeryContainerClass>* {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .OrderSummeryHeadContainerClass, .OrderSummeryHeadContainerClass>div:first-child, .costClass, .TotalClass, .productClass, .productClass>div, .counterClass {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}

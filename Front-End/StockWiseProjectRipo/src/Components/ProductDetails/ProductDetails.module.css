@@ -1,0 +1,253 @@
+.ProductDetailsContainerClass {
+    width: 80%;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+.arbProductDetailsContainerClass {
+    direction: rtl;
+}
+
+.darkProductDetailsContainerClass {
+    color: white;
+}
+
+/*Edit Component Style*/
+
+.imagesContainerClass {
+    height: 500px;
+    width: 400px;
+}
+
+
+.imagesContainerClass>div:first-child {
+    height: 400px;
+    width: 100%;
+}
+
+.imagesContainerClass>div img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.imageClass {
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
+    padding: 1px;
+}
+
+.activeImageClass {
+    border: 3px solid var(--mainButtonColor);
+
+}
+
+.smallImagesContainerClass {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+
+}
+
+.smallImagesContainerClass div {
+    cursor: pointer;
+}
+
+.smallImagesContainerClass div img {
+    border-radius: 15px !important;
+
+}
+
+.stockCaseClass {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid var(--secondTextColor);
+
+
+
+}
+
+.stockCaseClass>div {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+
+.productDataContainerClass {
+    height: fit-content;
+    width: 400px;
+    position: relative;
+    /* border: 1px solid var(--secondTextColor); */
+    /* background-color: var(--lightBackground); */
+    box-shadow: 0 0 5px 0px var(--secondTextColor);
+    border-radius: 15px;
+}
+
+.productDataContainerClassX {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productDataContainerClassX>div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.productHedingContainerClassClass {}
+
+.productTitleClass {
+    font-size: 35px;
+}
+
+.productCategoryClass {
+    display: flex;
+    gap: 10px;
+    color: rgb(0, 170, 255);
+}
+
+.productRateClass {}
+
+.productRateClass span:last-child i {
+    color: gold;
+}
+
+.btnContainerClass {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.btnContainerClass>div {
+    background-color: var(--mainButtonColor);
+    text-align: center;
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+
+.orderedProductCountClass {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 7px;
+    border: 1px solid var(--borderColor);
+
+}
+
+.orderedProductCountClass>div {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+.productDescClass {}
+
+.productDiscountClass div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.newPriceClass {
+    font-size: 30px;
+}
+
+.oldPriceClass {
+    font-size: 15px;
+    text-decoration: line-through;
+    color: var(--secondTextColor);
+}
+
+.discountValueClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.outOfStockClass {
+    background-color: var(--failedColor);
+    color: white;
+}
+
+.notOutOfStockClass {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.chooseColorClass {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.chooseProductColorContainerClass {
+    display: flex;
+    gap: 15px;
+    /* background-color: wheat; */
+    padding: 15px 15px;
+    width: fit-content;
+}
+
+.chooseProductColorContainerClass>div {
+    border: 3px solid black;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.choosenColorClass {
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.activeColorClass {
+    border: 3px solid var(--mainButtonColor) !important;
+}

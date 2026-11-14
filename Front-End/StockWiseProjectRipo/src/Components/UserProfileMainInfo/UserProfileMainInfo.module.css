@@ -1,0 +1,395 @@
+.UserProfileMainInfoContainerClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    background-image: url("../../Images/bg1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    min-height: 200px;
+    /* grid-area: UserProfileMainInfo; */
+}
+
+.darkUserProfileMainInfoContainerClass {
+    background-image: url("../../Images/Dark\ Green\ E-Commerce\ Wave\ Banner.png");
+    color: white;
+}
+
+.darkUserProfileMainInfoContainerClass .userDataContainerClass>div:first-child, .darkUserProfileMainInfoContainerClass .userDataContainerClass>div {
+    color: white;
+}
+
+.UserProfileMainInfoContainerClass>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.RecentOrdersDataClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--secondTextColor);
+}
+
+.RecentOrdersDataClass>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imgContainerClass {
+    height: 70px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.imgContainerClass img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.RecentOrdersDataClass>div:last-child {
+    height: 30px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.darkClientPersonalInfoContianerClass {
+    background-color: var(--cardDark) !important;
+    color: white;
+}
+
+.darkRecentOrdersContainerClass {
+    background-color: var(--cardDark) !important;
+    color: white !important;
+}
+
+.darkRecentOrdersContainerClass .RecentOrdersHeaderClass div:first-child {
+    background-color: var(--cardDark) !important;
+    color: white !important;
+}
+
+@media (max-width:900px) {
+    .UserProfileMainInfoContainerClass {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width:530px) {
+    .UserProfileMainInfoContainerClass>div:first-child {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+}
+
+.userImgClass {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.userImgClass img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.userDataContainerClass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    grid-area: userDataContainerClass;
+}
+
+.userDataContainerClass>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.userDataContainerClass>div:first-child div:first-child {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.userDataContainerClass>div:first-child div:last-child {
+    /* background-color: var(--mainBlueColor); */
+    /* color: white; */
+    /* height: 20px; */
+    /* width: 20px; */
+    border-radius: 50%;
+    /* padding: 12px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userDataContainerClass>div:first-child {
+    color: black;
+}
+
+.userDataContainerClass>div {
+    display: flex;
+    gap: 10px;
+    color: var(--secondTextColor);
+}
+
+.eidtBtnContainerClass {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--mainButtonColor);
+    border: 2px solid var(--mainButtonColor);
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.eidtBtnContainerClass:hover {
+    background-color: var(--mainButtonColor);
+    color: white;
+}
+
+.starBgClass>div {
+    color: var(--mainBlueColor);
+    font-size: 30px !important;
+    position: relative;
+}
+
+.starBgClass>div>div {
+    color: white;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px !important;
+}
+
+/* Client Statics */
+
+.ClitentStaticsContainerClass {
+    margin: 20px 0;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-area: ClitentStatics;
+}
+
+.staticClass {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.staticClass>div:first-child {
+    background-color: #2990ff23;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--mainBlueColor);
+    font-size: 25px;
+}
+
+.staticClass>div:last-child div:first-child {
+    color: black;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.staticClass>div:last-child div:last-child {
+    color: var(--secondTextColor);
+    font-size: 18px;
+}
+
+.ClientPersonalInfoContianerClass {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    grid-area: ClientPersonalInfo;
+
+}
+
+.ClientPersonalInfoHeaderClass {
+    display: flex;
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.ClientPersonalInfoHeaderClass div:first-child {
+    color: var(--mainBlueColor);
+}
+
+.ClientPersonalInfoHeaderClass div:last-child {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.ClientPersonalInfoDataClass {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--secondTextColor);
+}
+
+.ClientPersonalInfoDataClass>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+}
+
+@media (max-width:380px) {
+    .ClientPersonalInfoDataClass>div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 25px;
+
+    }
+}
+
+.ClientPersonalInfoDataClass>div>div:first-child {
+    display: flex;
+    gap: 5px;
+    width: 150px;
+}
+
+.ClientPersonalInfoEditBtnClass {
+    display: flex;
+    gap: 10px;
+    background-color: #22c55e36;
+    color: var(--mainButtonColor);
+    border-radius: 5px;
+    padding: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.RecentOrdersContainerClass {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    grid-area: RecentOrders;
+}
+
+
+.RecentOrdersHeaderClass {
+    display: flex;
+    justify-content: space-between
+}
+
+.RecentOrdersHeaderClass div:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: black;
+}
+
+.RecentOrdersHeaderClass div:last-child {
+    cursor: pointer;
+}
+
+.RecentOrdersHeaderClass div:first-child div:last-child {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.RecentOrdersHeaderClass>div:first-child i {
+    color: var(--mainButtonColor);
+
+}
+
+
+.RecentOrdersHeaderClass>div:last-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: var(--mainButtonColor);
+}
+
+
+.waitingClass {
+    background-color: #FDE8F0;
+    color: #F43F78;
+}
+
+.shippingClass {
+    background-color: #2990ff1d;
+    color: var(--mainBlueColor);
+}
+
+.deliveredClass {
+    background-color: #22c55e20;
+    color: #22C55E;
+}
+
+.ordersListClass {
+    height: 200px;
+}
+
+.userDataOrdersPageContainerClass {
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.userDataOrdersPageContainerClass div:first-child {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+@media (max-width:1145px) {
+    .ClitentStaticsContainerClass {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
